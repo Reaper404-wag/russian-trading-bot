@@ -1,0 +1,24 @@
+# Зависимости для работы с базой данных российского торгового бота
+# Database dependencies for Russian trading bot
+
+# Основные зависимости для работы с базой данных
+sqlalchemy>=2.0.0
+psycopg2-binary>=2.9.0  # PostgreSQL драйвер
+alembic>=1.12.0         # Миграции базы данных
+
+# Для работы с временными зонами (российское время)
+pytz>=2023.3
+
+# Для тестирования
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+
+# Для асинхронной работы (опционально)
+asyncpg>=0.28.0
+sqlalchemy[asyncio]>=2.0.0
+
+# Для мониторинга производительности
+sqlalchemy-utils>=0.41.0
+
+# Для работы с JSON в PostgreSQL
+psycopg2[binary]>=2.9.0

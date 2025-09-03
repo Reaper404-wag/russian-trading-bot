@@ -1,0 +1,73 @@
+# Упрощенная конфигурация для хостинга
+version: '3.8'
+
+services:
+  # Основное приложение
+  trading-bot:
+    build: .
+    container_name: russian-trading-bot
+    restart: unless-stopped
+    environment:
+      - ENVIRONMENT=production
+      - POSTGRES_HOST=postgres
+      - REDIS_HOST=redis
+      - TZ=Europe/Moscow
+    env_file:
+      - .env.production
+    volumes:
+      - ./logs:/app/logs
+      - ./backups:/app/backups
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+      - redis
+    healthcheck:
+      test: ["CMD", "python", "-c", "import requests; requests.get('http://localhost:8000/health')"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+  # База данных PostgreSQL
+  postgres:
+    image: postgres:15-alpine
+    container_name: trading-postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_DB=russian_trading
+      - POSTGRES_USER=trading_user
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_INITDB_ARGS=--locale=ru_RU.UTF-8
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./backups:/backups
+    # Не открываем порт наружу для безопасности
+    expose:
+      - "5432"
+
+  # Redis для кэширования
+  redis:
+    image: redis:7-alpine
+    container_name: trading-redis
+    restart: unless-stopped
+    command: redis-server --appendonly yes --requirepass ${REDIS_PASSWORD}
+    volumes:
+      - redis_data:/data
+    # Не открываем порт наружу для безопасности
+    expose:
+      - "6379"
+
+  # Простой веб-сервер (nginx не нужен для начала)
+  # Можно добавить позже если понадобится
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+
+# Простая сеть
+networks:
+  default:
+    name: trading-network

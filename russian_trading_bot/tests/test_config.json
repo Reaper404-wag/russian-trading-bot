@@ -1,0 +1,115 @@
+{
+  "test_suites": [
+    {
+      "name": "unit_tests",
+      "test_files": [
+        "test_moex_client.py",
+        "test_news_aggregator.py",
+        "test_sentiment_analyzer.py",
+        "test_technical_analyzer.py",
+        "test_ai_decision_engine.py",
+        "test_risk_manager.py",
+        "test_portfolio_manager.py",
+        "test_russian_nlp.py",
+        "test_entity_recognizer.py",
+        "test_volume_analyzer.py"
+      ],
+      "timeout_seconds": 300,
+      "critical": true,
+      "retry_count": 2,
+      "parallel": false
+    },
+    {
+      "name": "integration_tests",
+      "test_files": [
+        "test_integration_workflow.py",
+        "test_broker_integration.py",
+        "test_alert_integration.py"
+      ],
+      "timeout_seconds": 600,
+      "critical": true,
+      "retry_count": 1,
+      "parallel": false
+    },
+    {
+      "name": "comprehensive_integration",
+      "test_files": [
+        "test_comprehensive_integration.py"
+      ],
+      "timeout_seconds": 900,
+      "critical": false,
+      "retry_count": 1,
+      "parallel": false
+    },
+    {
+      "name": "performance_tests",
+      "test_files": [
+        "test_backtesting_engine.py",
+        "test_paper_trading_engine.py",
+        "test_performance_analytics.py"
+      ],
+      "timeout_seconds": 1200,
+      "critical": false,
+      "retry_count": 1,
+      "parallel": false
+    },
+    {
+      "name": "stress_tests",
+      "test_files": [
+        "test_comprehensive_integration.py::TestStressTesting"
+      ],
+      "timeout_seconds": 1800,
+      "critical": false,
+      "retry_count": 1,
+      "parallel": false
+    },
+    {
+      "name": "broker_api_tests",
+      "test_files": [
+        "test_comprehensive_integration.py::TestRussianBrokerAPIIntegration"
+      ],
+      "timeout_seconds": 600,
+      "critical": true,
+      "retry_count": 2,
+      "parallel": false
+    },
+    {
+      "name": "automated_pipeline_tests",
+      "test_files": [
+        "test_comprehensive_integration.py::TestAutomatedTestingPipeline"
+      ],
+      "timeout_seconds": 900,
+      "critical": false,
+      "retry_count": 1,
+      "parallel": false
+    }
+  ],
+  "notification_settings": {
+    "email": {
+      "enabled": true,
+      "recipients": ["admin@trading-system.ru"],
+      "smtp_server": "smtp.example.com",
+      "smtp_port": 587
+    },
+    "slack": {
+      "enabled": true,
+      "webhook_url": "https://hooks.slack.com/services/YOUR/SLACK/WEBHOOK",
+      "channel": "#trading-alerts"
+    },
+    "telegram": {
+      "enabled": false,
+      "bot_token": "YOUR_BOT_TOKEN",
+      "chat_id": "YOUR_CHAT_ID"
+    }
+  },
+  "reporting": {
+    "generate_html_report": true,
+    "save_artifacts": true,
+    "retention_days": 30
+  },
+  "thresholds": {
+    "max_failure_rate": 0.1,
+    "max_response_time": 5.0,
+    "min_success_rate": 0.9
+  }
+}

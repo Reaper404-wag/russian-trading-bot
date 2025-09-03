@@ -1,0 +1,147 @@
+{
+  "test_suites": [
+    {
+      "name": "end_to_end_workflow",
+      "test_files": [
+        "test_integration_comprehensive_workflow.py::TestEndToEndWorkflow"
+      ],
+      "timeout_seconds": 300,
+      "critical": true,
+      "retry_count": 2,
+      "parallel": false,
+      "stress_test": false,
+      "resource_intensive": true
+    },
+    {
+      "name": "broker_api_integration",
+      "test_files": [
+        "test_integration_comprehensive_workflow.py::TestBrokerAPIIntegration"
+      ],
+      "timeout_seconds": 240,
+      "critical": true,
+      "retry_count": 1,
+      "parallel": false,
+      "stress_test": false,
+      "resource_intensive": false
+    },
+    {
+      "name": "stress_testing_normal",
+      "test_files": [
+        "test_integration_comprehensive_workflow.py::TestStressTesting::test_normal_market_stress"
+      ],
+      "timeout_seconds": 180,
+      "critical": false,
+      "retry_count": 1,
+      "parallel": false,
+      "stress_test": true,
+      "resource_intensive": true
+    },
+    {
+      "name": "stress_testing_high_volatility",
+      "test_files": [
+        "test_integration_comprehensive_workflow.py::TestStressTesting::test_high_volatility_stress"
+      ],
+      "timeout_seconds": 300,
+      "critical": false,
+      "retry_count": 1,
+      "parallel": false,
+      "stress_test": true,
+      "resource_intensive": true
+    },
+    {
+      "name": "stress_testing_crisis",
+      "test_files": [
+        "test_integration_comprehensive_workflow.py::TestStressTesting::test_geopolitical_crisis_stress"
+      ],
+      "timeout_seconds": 360,
+      "critical": false,
+      "retry_count": 1,
+      "parallel": false,
+      "stress_test": true,
+      "resource_intensive": true
+    },
+    {
+      "name": "stress_testing_overload",
+      "test_files": [
+        "test_integration_comprehensive_workflow.py::TestStressTesting::test_broker_overload_stress",
+        "test_integration_comprehensive_workflow.py::TestStressTesting::test_concurrent_user_stress"
+      ],
+      "timeout_seconds": 240,
+      "critical": false,
+      "retry_count": 1,
+      "parallel": false,
+      "stress_test": true,
+      "resource_intensive": true
+    },
+    {
+      "name": "automated_pipeline",
+      "test_files": [
+        "test_integration_comprehensive_workflow.py::TestAutomatedPipeline"
+      ],
+      "timeout_seconds": 180,
+      "critical": false,
+      "retry_count": 1,
+      "parallel": true,
+      "stress_test": false,
+      "resource_intensive": false
+    },
+    {
+      "name": "performance_benchmarks",
+      "test_files": [
+        "test_integration_comprehensive_workflow.py::TestPerformanceBenchmarks"
+      ],
+      "timeout_seconds": 300,
+      "critical": false,
+      "retry_count": 1,
+      "parallel": false,
+      "stress_test": false,
+      "resource_intensive": true
+    },
+    {
+      "name": "system_monitoring",
+      "test_files": [
+        "test_integration_comprehensive_workflow.py::TestSystemMonitoring"
+      ],
+      "timeout_seconds": 120,
+      "critical": false,
+      "retry_count": 1,
+      "parallel": true,
+      "stress_test": false,
+      "resource_intensive": false
+    }
+  ],
+  "notification_settings": {
+    "email_enabled": false,
+    "slack_enabled": false,
+    "log_level": "INFO"
+  },
+  "performance_thresholds": {
+    "max_memory_mb": 2000,
+    "max_cpu_percent": 90,
+    "max_duration_seconds": 1800,
+    "min_trades_per_second": 5,
+    "min_data_points_per_second": 10
+  },
+  "stress_test_scenarios": {
+    "normal_market": {
+      "volatility_multiplier": 1.0,
+      "broker_failure_rate": 0.01,
+      "duration_seconds": 60
+    },
+    "high_volatility": {
+      "volatility_multiplier": 3.0,
+      "broker_failure_rate": 0.05,
+      "duration_seconds": 90
+    },
+    "crisis": {
+      "volatility_multiplier": 5.0,
+      "broker_failure_rate": 0.15,
+      "duration_seconds": 120
+    },
+    "overload": {
+      "concurrent_users": 10,
+      "broker_latency_ms": 1000,
+      "duration_seconds": 60
+    }
+  }
+}

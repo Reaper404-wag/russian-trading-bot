@@ -1,0 +1,56 @@
+.trading-history-container {
+  padding: 0;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.trading-history-table .ant-table-thead > tr > th {
+  background-color: #fafafa;
+  font-weight: 600;
+}
+
+.trading-history-table .ant-table-tbody > tr:hover > td {
+  background-color: #f5f5f5;
+}
+
+.expanded-row {
+  background-color: #fafafa;
+  padding: 16px;
+  border-radius: 6px;
+  margin: 8px 0;
+}
+
+.expanded-row h5 {
+  margin-bottom: 8px;
+  color: #1890ff;
+}
+
+.expanded-row p {
+  margin: 0;
+  line-height: 1.6;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .trading-history-container {
+    padding: 0;
+  }
+  
+  .trading-history-table {
+    font-size: 12px;
+  }
+  
+  .ant-space {
+    flex-wrap: wrap;
+  }
+  
+  .ant-select,
+  .ant-picker {
+    min-width: 100px;
+  }
+}

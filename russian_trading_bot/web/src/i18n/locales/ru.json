@@ -1,0 +1,249 @@
+{
+  "navigation": {
+    "dashboard": "Панель управления",
+    "portfolio": "Портфель",
+    "tradingDecisions": "Торговые решения",
+    "trading": "Торговля",
+    "history": "История",
+    "analytics": "Аналитика",
+    "settings": "Настройки"
+  },
+  "portfolio": {
+    "title": "Обзор портфеля",
+    "totalValue": "Общая стоимость",
+    "dailyPnL": "Дневная П/У",
+    "totalReturn": "Общая доходность",
+    "cashBalance": "Денежный остаток",
+    "positions": "Позиции",
+    "symbol": "Символ",
+    "quantity": "Количество",
+    "avgPrice": "Средняя цена",
+    "currentPrice": "Текущая цена",
+    "marketValue": "Рыночная стоимость",
+    "unrealizedPnL": "Нереализованная П/У",
+    "change": "Изменение",
+    "sharpeRatio": "Коэффициент Шарпа",
+    "maxDrawdown": "Максимальная просадка",
+    "volatility": "Волатильность"
+  },
+  "trading": {
+    "title": "История торговли",
+    "date": "Дата",
+    "time": "Время",
+    "symbol": "Символ",
+    "action": "Действие",
+    "quantity": "Количество",
+    "price": "Цена",
+    "total": "Сумма",
+    "status": "Статус",
+    "reasoning": "Обоснование",
+    "buy": "Покупка",
+    "sell": "Продажа",
+    "executed": "Исполнено",
+    "pending": "В ожидании",
+    "cancelled": "Отменено",
+    "decisions": {
+      "title": "Торговые решения",
+      "subtitle": "Анализ сигналов, управление рисками и уведомления",
+      "refreshAll": "Обновить все",
+      "tabs": {
+        "signals": "Торговые сигналы",
+        "risk": "Оценка рисков",
+        "notifications": "Уведомления"
+      },
+      "stats": {
+        "activeSignals": "Активные сигналы",
+        "riskLevel": "Уровень риска",
+        "unreadAlerts": "Непрочитанные"
+      }
+    },
+    "signals": {
+      "title": "Торговые сигналы",
+      "buy": "Покупка",
+      "sell": "Продажа",
+      "hold": "Удержание",
+      "approve": "Одобрить",
+      "reject": "Отклонить",
+      "currentPrice": "Текущая цена",
+      "targetPrice": "Целевая цена",
+      "stopLoss": "Стоп-лосс",
+      "confidence": "Уверенность",
+      "expectedReturn": "Ожидаемая доходность",
+      "time": "Время",
+      "reasoning": "Обоснование",
+      "risk": {
+        "low": "Низкий риск",
+        "medium": "Средний риск",
+        "high": "Высокий риск"
+      },
+      "approvalModal": {
+        "title": "Подтверждение торгового сигнала",
+        "summary": "Сводка по сигналу",
+        "confirm": "Подтвердить сделку",
+        "warning": "Внимание!",
+        "warningText": "Торговля на финансовых рынках связана с рисками. Убедитесь, что вы понимаете все риски перед совершением сделки."
+      }
+    }
+  },
+  "dashboard": {
+    "title": "Панель управления",
+    "marketStatus": "Статус рынка",
+    "open": "Открыт",
+    "closed": "Закрыт",
+    "premarket": "Предторговая сессия",
+    "aftermarket": "Послеторговая сессия",
+    "indices": "Индексы",
+    "moexIndex": "Индекс MOEX",
+    "rtsIndex": "Индекс РТС",
+    "recentTrades": "Последние сделки",
+    "topGainers": "Лидеры роста",
+    "topLosers": "Лидеры падения",
+    "news": "Новости",
+    "alerts": "Уведомления"
+  },
+  "common": {
+    "loading": "Загрузка...",
+    "error": "Ошибка",
+    "refresh": "Обновить",
+    "close": "Закрыть",
+    "save": "Сохранить",
+    "cancel": "Отмена",
+    "confirm": "Подтвердить",
+    "ruble": "₽",
+    "percent": "%",
+    "volume": "Объем",
+    "high": "Максимум",
+    "low": "Минимум",
+    "open": "Открытие",
+    "closing": "Закрытие",
+    "showMore": "Показать больше"
+  },
+  "dateTime": {
+    "today": "Сегодня",
+    "yesterday": "Вчера",
+    "thisWeek": "На этой неделе",
+    "thisMonth": "В этом месяце",
+    "format": {
+      "date": "DD.MM.YYYY",
+      "time": "HH:mm",
+      "dateTime": "DD.MM.YYYY HH:mm"
+    }
+  },
+  "charts": {
+    "realTimePrice": "Цена в реальном времени",
+    "technicalIndicators": "Технические индикаторы",
+    "portfolioPerformance": "Доходность портфеля",
+    "portfolioValue": "Стоимость портфеля",
+    "returns": "Доходность",
+    "signal": "Сигнал",
+    "trend": "Тренд"
+  },
+  "news": {
+    "russianFinancialNews": "Российские финансовые новости",
+    "sentiment": {
+      "positive": "Позитивные",
+      "negative": "Негативные",
+      "neutral": "Нейтральные"
+    },
+    "impact": {
+      "high": "Высокое влияние",
+      "medium": "Среднее влияние",
+      "low": "Низкое влияние"
+    },
+    "category": {
+      "monetary_policy": "Денежная политика",
+      "energy": "Энергетика",
+      "technology": "Технологии",
+      "retail": "Ритейл",
+      "banking": "Банки"
+    }
+  },
+  "risk": {
+    "assessment": {
+      "title": "Оценка рисков",
+      "description": "Комплексная оценка рисков портфеля и рыночных условий"
+    },
+    "score": "Балл",
+    "currentLevel": "Текущий уровень риска",
+    "lastUpdated": "Обновлено",
+    "level": {
+      "low": "Низкий",
+      "medium": "Средний",
+      "high": "Высокий"
+    },
+    "severity": {
+      "low": "Низкая",
+      "medium": "Средняя",
+      "high": "Высокая"
+    },
+    "portfolio": {
+      "title": "Риски портфеля",
+      "volatility": "Волатильность",
+      "sharpeRatio": "Коэфф. Шарпа",
+      "maxDrawdown": "Макс. просадка",
+      "beta": "Бета",
+      "var95": "VaR 95%",
+      "varTooltip": "Стоимость под риском с вероятностью 95%"
+    },
+    "market": {
+      "title": "Рыночные риски",
+      "moexVolatility": "Волатильность MOEX",
+      "rubleVolatility": "Волатильность рубля",
+      "geopoliticalRisk": "Геополитический риск",
+      "sectorConcentration": "Секторальная концентрация"
+    },
+    "factors": {
+      "title": "Факторы риска",
+      "impact": "Влияние",
+      "recommendation": "Рекомендация"
+    },
+    "recommendations": {
+      "title": "Рекомендации по управлению рисками"
+    }
+  },
+  "notifications": {
+    "title": "Уведомления и оповещения",
+    "empty": "Нет уведомлений",
+    "markRead": "Прочитано",
+    "markAllRead": "Отметить все как прочитанные",
+    "actionRequired": "Требуется действие",
+    "relatedStocks": "Связанные акции",
+    "clearAll": {
+      "button": "Очистить все",
+      "title": "Очистить все уведомления",
+      "content": "Вы уверены, что хотите удалить все уведомления? Это действие нельзя отменить.",
+      "success": "Все уведомления удалены"
+    },
+    "type": {
+      "price": "Цена",
+      "risk": "Риск",
+      "news": "Новости",
+      "signal": "Сигнал",
+      "system": "Система"
+    },
+    "severity": {
+      "low": "Низкая",
+      "medium": "Средняя",
+      "high": "Высокая"
+    },
+    "settings": {
+      "button": "Настройки",
+      "title": "Настройки уведомлений",
+      "saved": "Настройки сохранены",
+      "enabled": "Включить уведомления",
+      "enabledDesc": "Основной переключатель для всех уведомлений",
+      "priceAlerts": "Ценовые оповещения",
+      "priceAlertsDesc": "Уведомления о значительных изменениях цен",
+      "riskAlerts": "Оповещения о рисках",
+      "riskAlertsDesc": "Уведомления о превышении лимитов риска",
+      "newsAlerts": "Новостные оповещения",
+      "newsAlertsDesc": "Уведомления о важных новостях рынка",
+      "tradingSignals": "Торговые сигналы",
+      "tradingSignalsDesc": "Уведомления о новых торговых сигналах",
+      "emailNotifications": "Email уведомления",
+      "emailNotificationsDesc": "Отправка уведомлений на электронную почту",
+      "telegramNotifications": "Telegram уведомления",
+      "telegramNotificationsDesc": "Отправка уведомлений в Telegram"
+    }
+  }
+}

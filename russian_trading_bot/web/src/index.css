@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+
+.currency-rub::after {
+  content: ' ₽';
+}
+
+.russian-date {
+  font-variant-numeric: tabular-nums;
+}
+
+.portfolio-card {
+  margin-bottom: 16px;
+}
+
+.trading-signal {
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 8px;
+}
+
+.signal-buy {
+  background-color: #f6ffed;
+  border: 1px solid #b7eb8f;
+}
+
+.signal-sell {
+  background-color: #fff2e8;
+  border: 1px solid #ffbb96;
+}
+
+.signal-hold {
+  background-color: #f0f0f0;
+  border: 1px solid #d9d9d9;
+}
