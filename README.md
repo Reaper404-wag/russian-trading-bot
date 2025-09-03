@@ -98,7 +98,7 @@ Russian Trading Bot - это комплексная система автома�
 
 1. **Клонирование репозитория**
 ```bash
-git clone https://github.com/yourusername/russian-trading-bot.git
+git clone https://github.com/Reaper404-wag/russian-trading-bot.git
 cd russian-trading-bot
 ```
 
@@ -341,13 +341,11 @@ tail -f logs/risk_management.log
 
 ## 📞 Поддержка
 
-- **GitHub Issues**: [Создать issue](https://github.com/yourusername/russian-trading-bot/issues)
-- **Telegram**: @russian_trading_bot_support
-- **Email**: support@russian-trading-bot.ru
-- **Документация**: [Wiki](https://github.com/yourusername/russian-trading-bot/wiki)
+- **GitHub Issues**: [Создать issue](https://github.com/Reaper404-wag/russian-trading-bot/issues)
 
 ---
 
 **🇷🇺 Сделано в России для российского рынка**
 
 *Если проект оказался полезным, поставьте ⭐ звезду!*
+
